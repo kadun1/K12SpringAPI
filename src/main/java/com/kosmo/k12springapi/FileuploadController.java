@@ -167,6 +167,8 @@ public class FileuploadController {
 		//파일외에 폼값 받음.
 		String title = req.getParameter("title");
 		System.out.println("title="+title);
+		System.out.println("uploadAndroid userid="+req.getParameter("userid"));
+        System.out.println("uploadAndroid userpw="+req.getParameter("userpw"));
 		
 		/*
 		물리적경로를 기반으로 File객체를 생성한 후 지정된 디렉토리가
@@ -236,7 +238,7 @@ public class FileuploadController {
 	
 	
 	
-	//파일목록보기
+	//파일목록보기공용디렉토리 접근
 	@RequestMapping("/fileUpload/uploadList.do")
 	public String uploadList(HttpServletRequest req, Model model) {
 		
